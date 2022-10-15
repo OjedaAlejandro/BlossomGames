@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito",sans-serif;
+}
+
+body{
+    background: #F1FAFF;
+}
+
+.menu{
+    background-color: rgb(5, 5, 5);
+    text-transform: uppercase;
+
+    z-index: 3;
+    box-shadow: inset 0px 0 5px 0 rgba(0, 0, 0,0.9);
+}
+.campos-navegacion a{
+    color:#b3b3fa ;
+}
+.campos-navegacion a:hover{
+    color:#83277b;
+    scale: 1.1;
+   
+}
+
+.slider h1{
+    color: #F1FAFF;
+}
+
+div[id]{     /*Nos da un margen a la hora de navegar por anclas*/
+    scroll-margin-top:70px;
+}
+
+
+.container__cards{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: -30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    width: 300px;
+    margin-left: 15px;
+    transition: all 300ms;
+    border: none;
+    margin-top: 2vh;
+}
+
+.card:hover{
+    width: 300px;
+    transition: 1000ms;
+}
+
+
+.card .cover{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .cover img{
+    width: 250px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 40px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+    transition: all 400ms;
+}
+
+.card:hover .cover img{
+    top: 0px;
+    filter: none;
+}
+
+.card .img__back{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    background-size: cover;
+    border-radius: 20px;
+    transition: all 300ms;
+}
+
+.card:nth-of-type(odd) .img__back{
+    background:#6c757D;
+}
+
+.card:nth-of-type(even) .img__back{
+    background:#6c757D;
+}
+
+
+
+.card .description{
+    background: white;
+    margin-top: -10px;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    transition: all 300ms;
+    box-shadow: 0px 0px 10px rgba(5, 5, 5, 0.5);
+}
+
+.card:hover .description{
+    padding: 40px;
+}
+
+.card .description h2{
+    margin-top: 10px;
+}
+
+.card .description p{
+    margin-top: 10px;
+}
+
+.card .description input{
+    padding: 10px 40px;
+    margin-top: 20px;
+    border: none;
+    background: #83277b ;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 300ms;
+}
+
+.card .description input:hover{
+    background: #A6359D;
+}
+
+/*Tatjetas*/
+.tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.card2 {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+    
+}
+
+.card2 .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card2 .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card2 .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card2 .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+}
+
+.card2 .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(255, 250, 250);
+    padding: 15px;
+    color: #252125;;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card2 .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card2 .back .link a {
+    color: #f3f3f3;
+}
+
+.card2 .back h3 {
+    text-transform: uppercase;
+    font-family: Times, serif;
+    color: #A6359D;
+    border-bottom: #000 1px solid;
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card2 .back p {
+    letter-spacing: 1px;
+} 
+
+.card2:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card2:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
+h1{
+    text-align: center;
+    color:#A6359D;
+}
+
+.cont-tarjetas h1{
+    padding-top: 18vh;
+    margin-bottom: -50px;
+}
+
+
+.cont-tarjetas h2{
+    padding-left: 3vw;
+    margin-bottom: 3vh;
+}
+
+.cont-tarjetas:nth-of-type(2) h2{
+   margin-top: 10vh;
+}
+
+
+
+.barra-Navegacion{
+    position: sticky;
+    top: 0;
+}
+
